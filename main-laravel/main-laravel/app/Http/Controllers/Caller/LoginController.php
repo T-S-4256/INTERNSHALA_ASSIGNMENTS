@@ -12,7 +12,7 @@ use Hash;
 use Session;
 use App\Models\Callers;
 use App\User;
-use App\Http\Requests;
+use App\Http\Requests;     AICTE B2 Offer Letter 16001-18K-249 
 use \Illuminate\Support\Facades\Redis;
 
 class LoginController extends Controller
