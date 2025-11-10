@@ -32,16 +32,16 @@ export default function Feed() {
   };
 
   const handleLikeUpdate = (postId, likesCount, likedUsernames) => {
-    setPosts(prev => prev.map(p => p._id === postId ? { ...p, likes: new Array(likesCount).fill(null).map((_,i)=> null), likedUsernames } : p));
+    setPosts(prev => prev.map(p => p._id === postId ? { ...p, likes: new Array(likesCount).fill(null).map((_, i) => null), likedUsernames } : p));
     // we keep posts' likes as count only, UI uses likedUsernames to show names
   };
 
   const handleAddComment = (postId, comment) => {
     setPosts(prev => prev.map(p => p._id === postId ? { ...p, comments: [...(p.comments || []), comment] } : p));
   };
-
   return (
     <Box>
+      <h3>Welcome, {user?.name || 'Guest'} 👋</h3>   {/* 👈 Use user here */}
       <CreatePostCard onPostCreated={handleNewPost} />
       {loading && <CircularProgress />}
       {!loading && posts.length === 0 && <div>No posts yet</div>}
@@ -54,7 +54,9 @@ export default function Feed() {
         />
       ))}
       <Box textAlign="center" mt={2}>
-        <Button variant="outlined" onClick={() => { setPage(p=>p+1); fetchPosts(page+1); }}>Load more</Button>
+        <Button variant="outlined" onClick={() => { setPage(p => p + 1); fetchPosts(page + 1); }}>
+          Load more
+        </Button>
       </Box>
     </Box>
   );
