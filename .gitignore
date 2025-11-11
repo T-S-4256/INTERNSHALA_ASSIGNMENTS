@@ -1,0 +1,22 @@
+# Node / Express
+node_modules/
+.env
+.env.*
+
+# Laravel
+/vendor
+/storage/*.key
+.env
+.env.*
+
+# Frontend (React/Vite)
+frontend/node_modules/
+frontend/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
