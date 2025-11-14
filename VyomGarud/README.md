@@ -51,7 +51,7 @@ Designed with a **military-futuristic aesthetic**, showcasing AI-powered autonom
 ```sh
 git clone https://github.com/<your-username>/vyomgarud-landing.git
 cd vyomgarud-landing
-
+```
 ### 2️⃣ Install Dependencies
 npm install
 
