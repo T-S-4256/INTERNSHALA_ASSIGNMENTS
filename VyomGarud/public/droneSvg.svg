@@ -1,0 +1,34 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .propeller {
+      animation: spin 0.6s linear infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <g filter="url(#shadow)">
+    <path d="M400 350 L460 380 L520 450 L460 520 L400 550 L340 520 L280 450 L340 380 Z" fill="#111" stroke="#ff7b00" stroke-width="4"/>
+  </g>
+
+  <!-- PROPELLER CIRCLES WITH CLASS -->
+  <circle class="propeller" cx="320" cy="350" r="25" fill="#222" stroke="#ff7b00" stroke-width="4"/>
+  <circle class="propeller" cx="480" cy="350" r="25" fill="#222" stroke="#ff7b00" stroke-width="4"/>
+  <circle class="propeller" cx="320" cy="550" r="25" fill="#222" stroke="#ff7b00" stroke-width="4"/>
+  <circle class="propeller" cx="480" cy="550" r="25" fill="#222" stroke="#ff7b00" stroke-width="4"/>
+
+  <!-- ARMS -->
+  <path d="M320 350 L260 310" stroke="#aaa" stroke-width="5"/>
+  <path d="M480 350 L540 310" stroke="#aaa" stroke-width="5"/>
+  <path d="M320 550 L260 590" stroke="#aaa" stroke-width="5"/>
+  <path d="M480 550 L540 590" stroke="#aaa" stroke-width="5"/>
+
+  <defs>
+    <filter id="shadow" x="-100" y="-100" width="1000" height="1000">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="black" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+</svg>
